@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body>
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script>
+        const socket = io.connect();
+        socket.on("updateBlog",(Blog)=>{
+            console.log("updateBlog");
+            console.log(Blog);
+        });
+        socket.on("newBlog",(Blog)=>{
+            console.log("NewBlog");
+            console.log(Blog);
+        });
+    </script>
+</body>
+
+</html>
