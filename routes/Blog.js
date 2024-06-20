@@ -5,5 +5,5 @@ const {handleUpdateBlog,handleNewBlog,handleGetBlog,handleAllBlogs}=require('../
 
 router.route('/All').get(handleAllBlogs);
 
-router.route('/blog').get(handleGetBlog).post(handleNewBlog).put(handleUpdateBlog);
+router.route('/').get(handleGetBlog).post(handleNewBlog).put(handleUpdateBlog);
 module.exports=router;

@@ -24,12 +24,12 @@ app.get('/', (req, res) => {
     res.sendFile(join(__dirname, 'index.html'));
   });
 
-app.use('/api',(req,res,next)=>{
+app.use('/api/blog',(req,res,next)=>{
     req.ConnectionSocket=io;
     next();
 },Blog);
 
-app.use('/api',(req,res,next)=>{
+app.use('/api/comment',(req,res,next)=>{
     req.ConnectionSocket=io;
     next();
 },Comment);
